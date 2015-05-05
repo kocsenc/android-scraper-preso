@@ -86,7 +86,8 @@
 
         <section>
             <h2>Analyzing</h2>
-            <small>Some Examples</small><br>
+            <small>Some Examples</small>
+            <br>
             <ul>
                 <li>View trends in apps</li>
                 <li>What feature makes an app successfull?</li>
@@ -104,15 +105,29 @@
             </p>
 
             <p class="fragment roll-in">
-                immediately apparent why this is useful, for some people.
+                ... immediately apparent why this is useful, for some people.
             </p>
 
             <p class="fragment roll-in">As is the case with heavy data mining.</p>
         </section>
 
+        <section>
+            <h2>Lets look at emoji</h2>
+            <a href="http://emojitracker.com">
+                <small>Live twitter feed</small>
+            </a><br>
+            <img src="img/emoji_tracker.gif">
+        </section>
 
         <section>
-            <h2>So what features are we keeping track of?</h2>
+            <h2>Instagram Emoji Impact</h2>
+            <img class="fragment grow" src="img/emoji_instagram.png" width="60%">
+
+            <p>Over <b>40%</b> of the words in Instagram are Emoji.</p>
+        </section>
+
+        <section>
+            <h2>So what features are we gathering?</h2>
             <table>
                 <thead>
                 <tr>
@@ -122,24 +137,24 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>General</td>
-                    <td>Sharing</td>
+                    <td class="fragment highlight-blue">General</td>
+                    <td class="fragment highlight-blue">Sharing</td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td>Internet Use</td>
+                    <td class="fragment highlight-blue">Internet Use</td>
                 <tr>
                 <tr>
                     <td></td>
-                    <td>Internationalization</td>
+                    <td class="fragment highlight-blue">Internationalization</td>
                 </tr>
                 <tr>
-                    <td>Security</td>
-                    <td>SSL Use</td>
+                    <td class="fragment highlight-blue">Security</td>
+                    <td class="fragment highlight-blue">SSL Use</td>
                 <tr>
                 <tr>
                     <td></td>
-                    <td>Account Manager</td>
+                    <td class="fragment highlight-blue">Account Manager</td>
                 <tr>
                 </tbody>
             </table>
@@ -150,32 +165,85 @@
         <section>
             <h2>Earliest Findings</h2>
             <h4>weather apps</h4>
-            <img src="img/finding1.png">
+            <img class="fragment grow" src="img/finding1.png">
 
             <p class="fragment roll-in">
-                Say, didn't hearbleed happen around that time?<br>
-                <img src="http://www.internetsociety.org/sites/default/files/styles/medium/public/heartbleed.png?itok=dWb_JdbQ"
-                     width="20%">?
+                Say, didn't Hearbleed happen around that time?<br>
+                <img src="img/heartbleed.png"
+                     width="10%">
             </p>
         </section>
 
-        <section data-markdown>
-            <script type="text/template">
-                ## Markdown support
-
-                Write content using inline or external Markdown.
-                Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-                ```
-                <section data-markdown>
-                    ## Markdown support
-
-                    Write content using inline or external Markdown.
-                    Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-                </section>
-                ```
-            </script>
+        <section>
+            <h2>How does it work?</h2>
         </section>
+
+        <section>
+            <section>
+                <h2>Walkthrough</h2>
+                <ol>
+                    <li class="fragment">Get App</li>
+                    <li class="fragment">Decompile</li>
+                    <li class="fragment">Analyze & Save</li>
+                    <li class="fragment">Repeat</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>1. Get App</h2>
+                Already happened by previous research
+            </section>
+
+            <section>
+                <h2>2. Decompile</h2>
+                <small>Phase I</small>
+                <br>
+
+                <p>
+
+                <p class="">APK</p>
+                <code class="fragment">.dex -> .jar </code>
+                <code class="fragment"> -> .java</code>
+                </p>
+
+                <p>
+                    <code class="fragment">unzip </code>
+                    <code class="fragment"> | dex2jar </code>
+                    <code class="fragment"> | procyon decompiler</code>
+                </p>
+                <code class="fragment">Unreadable XML -> XML</code>
+            </section>
+
+            <section>
+                <h2>2. Decompile</h2>
+                <small>continued</small>
+                <br>
+
+                <p>
+                    There are actually no tools that will do this entire stack.<br>
+                    I'm proud.
+                </p>
+
+                <p class="fragment">
+                    Takes ~ 10 minutes/app and up to &infin;
+                </p>
+                <code class="fragment">
+                    10 * 100k = 1 Mil minutes = <b style="font-size: larger">~2 years</b>
+                </code>
+            </section>
+
+            <section>
+                <h2>3. Analyze</h2>
+                <small>Phase II</small>
+            </section>
+
+
+        </section>
+
+        <section>
+            <h2>How does it work?</h2>
+        </section>
+
 
         <section>
             <section id="fragments">
@@ -284,25 +352,6 @@
             </section>
         </section>
 
-        <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-            <h2>Background Transitions</h2>
-
-            <p>
-                Different background transitions are available via the backgroundTransition option. This one's called
-                "zoom".
-            </p>
-            <pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-        </section>
-
-        <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-            <h2>Background Transitions</h2>
-
-            <p>
-                You can override background transitions per-slide.
-            </p>
-            <pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-        </section>
-
         <section>
             <h2>Pretty Code</h2>
 					<pre><code data-trim contenteditable>
@@ -322,50 +371,6 @@
                         }
                     </code></pre>
             <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.
-            </p>
-        </section>
-
-        <section>
-            <h2>Marvelous List</h2>
-            <ul>
-                <li>No order here</li>
-                <li>Or here</li>
-                <li>Or here</li>
-                <li>Or here</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Fantastic Ordered List</h2>
-            <ol>
-                <li>One is smaller than...</li>
-                <li>Two is smaller than...</li>
-                <li>Three!</li>
-            </ol>
-        </section>
-
-        <section>
-            <h2>Clever Quotes</h2>
-
-            <p>
-                These guys come in two forms, inline: <q
-                    cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-            </p>
-            <blockquote
-                    cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of
-                typewriters would
-                reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-            </blockquote>
-        </section>
-
-        <section>
-            <h2>Intergalactic Interconnections</h2>
-
-            <p>
-                You can link between slides internally,
-                <a href="#/2/3">like this</a>.
             </p>
         </section>
 
