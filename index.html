@@ -21,9 +21,6 @@
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Font awesome icons -->
-		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -55,17 +52,33 @@
 
 				<section>
 					<h2>Outline</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+					<p style="text-align: left">
+						Introduction<br>
+                        Results<br>
+                        Diving into the code<br>
+                        Future work<br>
 					</p>
+
+                    <small>Follow the presentation @ <a href="android.kocsen.com">android.kocsen.com</a></small>
 				</section>
 
 				<section>
 					<h2>Objective</h2>
 					<blockquote>
-						To view the change of features over time with our application corpora.
+						To <b>gather</b> app features with our application corpora to <b>analyze</b> change over time.
 					</blockquote>
+                    <h3 class="fragment roll-in"><u>Gather</u> & Analyze</h3>
 				</section>
+
+                <section>
+                    <h2>Gathering</h2>
+                    Gathering existing app features.<br>
+                    <ul style="list-style-type: none">
+                        <li><img width="104px" src="img/sharing_android.png"></li>
+                        <li><img width="104px" src="img/internet.png"></li>
+                        <li><img width="104px" src="img/security.png"></li>
+                    </ul>
+                </section>
 
 				<section>
 					<h2>Why is it useful?</h2>
@@ -87,11 +100,50 @@
 					<p class="fragment roll-in">Remember we have a ton of data. Every feature of an application from all their versions.</p>
 				</section>
 
+                <section>
+                    <h2>So what features are we keeping track of?</h2>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Section</th>
+                            <th>Feature</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>General</td>
+                            <td>Sharing</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Internet Use</td>
+                        <tr>
+                        <tr>
+                            <td></td>
+                            <td>Internationalization</td>
+                        </tr>
+                        <tr>
+                            <td>Security</td>
+                            <td>SSL Use</td>
+                        <tr>
+                        <tr>
+                            <td></td>
+                            <td>Account Manager</td>
+                        <tr>
+                        </tbody>
+                    </table>
+                </section>
+
 
 				<!-- Early findings -->
 				<section>
 					<h2>Earliest Findings</h2>
-					<img class="fragment roll-in" src="">
+                    <h4>weather apps</h4>
+					<img src="img/finding1.png">
+                    <p class="fragment roll-in">
+                        Say, didn't hearbleed happen around that time?<br>
+                        <img src="http://www.internetsociety.org/sites/default/files/styles/medium/public/heartbleed.png?itok=dWb_JdbQ" width="20%">?
+                    </p>
 				</section>
 
 				<section data-markdown>
