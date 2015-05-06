@@ -202,8 +202,8 @@
                 <p>
 
                 <p class="">APK</p>
-                <code class="fragment">.dex -> .jar </code>
-                <code class="fragment"> -> .java</code>
+                <code class="fragment">.<b>dex</b> -> .<b>jar</b> </code>
+                <code class="fragment"> -> .<b>java</b></code>
                 </p>
 
                 <p>
@@ -228,128 +228,64 @@
                     Takes ~ 10 minutes/app and up to &infin;
                 </p>
                 <code class="fragment">
-                    10 * 100k = 1 Mil minutes = <b style="font-size: larger">~2 years</b>
+                    10 min * 100k apps = 1 Million minutes <br> = <b style="font-size: larger">~2 years</b>
                 </code>
             </section>
 
             <section>
                 <h2>3. Analyze</h2>
                 <small>Phase II</small>
-            </section>
-
-
-        </section>
-
-        <section>
-            <h2>How does it work?</h2>
-        </section>
-
-
-        <section>
-            <section id="fragments">
-                <h2>Fragments</h2>
-
-                <p>Hit the next arrow...</p>
-
-                <p class="fragment">... to step through ...</p>
-
-                <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span>
-                </p>
-
-                <aside class="notes">
-                    This slide has fragments which are also stepped through in the notes window.
-                </aside>
-            </section>
-            <section>
-                <h2>Fragment Styles</h2>
-
-                <p>There's different types of fragments, like:</p>
-
-                <p class="fragment grow">grow</p>
-
-                <p class="fragment shrink">shrink</p>
-
-                <p class="fragment roll-in">roll-in</p>
-
-                <p class="fragment fade-out">fade-out</p>
-
-                <p class="fragment current-visible">current-visible</p>
-
-                <p class="fragment highlight-red">highlight-red</p>
-
-                <p class="fragment highlight-blue">highlight-blue</p>
-            </section>
-        </section>
-
-        <section id="themes">
-            <h2>Themes</h2>
-
-            <p>
-                reveal.js comes with a few themes built in: <br>
-                <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black
-                    (default)</a> -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a>
                 <br>
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-            </p>
+
+                <p>Finding Key terms within code.</p><br>
+
+                <p><b>For SSL</b></p>
+                <img src="img/sslkeywords.png">
+            </section>
+
         </section>
 
         <section>
-            <section data-background="#dddddd">
-                <h2>Slide Backgrounds</h2>
+            <section>
+                <h2>Architecture</h2>
 
-                <p>
-                    Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color
-                    formats are supported.
-                </p>
-                <a href="#" class="navigate-down">
-                    <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png"
-                         alt="Down arrow">
-                </a>
+                <p>Command Pattern</p>
+                <img src="img/command.png">
+
+                <p class="fragment">Do we want to see how each of them work?</p>
             </section>
-            <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-                <h2>Image Backgrounds</h2>
-                <pre><code>&lt;section data-background="image.png"&gt;</code></pre>
+
+            <section>
+                <h2>Sharing Feature</h2>
+                <p>Looking for:</p>
+                <code style="font-size: larger; color: #0000ff;">.setAction(Intent.ACTION_SEND);</code>
             </section>
-            <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png"
-                     data-background-repeat="repeat" data-background-size="100px">
-                <h2>Tiled Backgrounds</h2>
-                <pre><code style="word-wrap: break-word;">&lt;section data-background="image.png"
-                    data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+
+            <section>
+                <h2>Account Manager</h2>
+                <p>Useful for storing passwords</p>
+                <code style="font-size: larger; color: #0000ff;">new AccountManager();</code>
+                <code style="font-size: larger; color: #0000ff;">.getAccountsByType(String);</code>
+                <code style="font-size: larger; color: #0000ff;">.addAccount(...);</code>
             </section>
-            <section
-                    data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm"
-                    data-background-color="#000000">
-                <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-                    <h2>Video Backgrounds</h2>
-                    <pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-                </div>
+
+            <section>
+                <h2>Internationalization</h2>
+                <p>Find directories</p><br>
+                <img src="img/internationalization.png"><br>
+                <small>Ability to discover <b>which</b> languages were used.</small>
             </section>
+
+            <section>
+                <h2>SSL Use</h2>
+                <a href="/#/11/4">See here</a>
+            </section>
+
+        </section>
+
+        <section>
+            <h2>Architecture Diagram</h2>
+            <img src="img/architechture.png">
         </section>
 
         <section>
